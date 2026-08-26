@@ -27,7 +27,7 @@ import "fmt"
 
 func main() {
 	// Ändert diese Zahl, um eine andere Aufgabe zu starten.
-	exercise := 1
+	exercise := 10
 
 	switch exercise {
 	case 1:
@@ -116,7 +116,15 @@ func aufgabe01() {
 	// Kopiert die Code-Schnipsel von oben hier hinein
 	// und bringt sie in die richtige Reihenfolge.
 
-	fmt.Println("Aufgabe 1: Sortiert die Code-Schnipsel aus den Kommentaren!")
+	name := "Stefan"
+	apples := 7
+	fmt.Println("Hallo", name+"!")
+	fmt.Println("Du hast", apples, "Äpfel.")
+	apples = apples + 5
+	fmt.Println("Nach dem Einkauf hast du", apples, "Äpfel.")
+	fmt.Println("Du isst einen Apfel!")
+	apples = apples - 1
+	fmt.Println("Nun hast du", apples, "Äpfel.")
 }
 
 // ============================================================
@@ -137,11 +145,12 @@ func aufgabe01() {
 // Fügt eine Ausgabe für x*y und x-y hinzu.
 
 func aufgabe02() {
-	x := 5
+	x := 10
 	y := 2
 
 	fmt.Println(x + y)
-	fmt.Println("x + y")
+	fmt.Println(x * y)
+	fmt.Println(x - y)
 }
 
 // ============================================================
@@ -161,11 +170,14 @@ func aufgabe02() {
 // und gebt auch euren Wohn- oder Studienort aus.
 
 func aufgabe03() {
-	name := "Max"
-	alter := 18
+	name := "Stefan"
+	alter := 20
+	ort := "Plankstadt"
 
 	fmt.Println("Hallo", name)
 	fmt.Println("Du bist", alter, "Jahre alt.")
+	alter = alter + 1
+	fmt.Println(name, ", du wohnst in", ort, " und bist nächstes Jahr", alter, "Jahre alt.")
 
 	// TODO: Alter im nächsten Jahr ausgeben
 	// TODO: Alter in 10 Jahren ausgeben
@@ -196,9 +208,13 @@ func aufgabe03() {
 
 func aufgabe04() {
 	apples := 5
-	apples = apples + 2
+	apples = apples * 5
+	bananas := 4
+	bananas = bananas / 2
 
 	fmt.Println("Äpfel:", apples)
+	fmt.Println("Bananen:", bananas)
+	fmt.Println("Es gibt", bananas+apples, "Früchte")
 }
 
 // ============================================================
@@ -238,8 +254,8 @@ func aufgabe04() {
 // und lasst euren Sitznachbarn herausfinden, was kaputt ist.
 
 func aufgabe05() {
-	fmt.Println("Bug Hunt!")
-
+	fmt.Println("Hallo")
+	fmt.Println("Welt")
 	// Kopiert hier jeweils EINEN kaputten Schnipsel hinein.
 }
 
@@ -269,6 +285,8 @@ func aufgabe06() {
 	x = x + 2
 	x = x * 4
 	x = x - 5
+	x = x + 30
+	x = x - 3
 
 	fmt.Println("x =", x)
 }
@@ -300,12 +318,14 @@ func aufgabe06() {
 // Ihr könnt dafür nach "Go else if" suchen oder experimentieren.
 
 func aufgabe07() {
-	alter := 18
+	alter := 17
 
 	if alter >= 18 {
 		fmt.Println("Du bist volljährig.")
+	} else if alter >= 16 {
+		fmt.Println("Du bist minderjährig und älter als 16.")
 	} else {
-		fmt.Println("Du bist noch nicht volljährig.")
+		fmt.Println("Du bist minderjährig und jünger als 16")
 	}
 }
 
@@ -334,12 +354,14 @@ func aufgabe07() {
 // Könnt ihr auch prüfen, ob eine Zahl negativ ist?
 
 func aufgabe08() {
-	number := 7
+	number := 5
 
 	if number > 5 {
 		fmt.Println("Die Zahl ist groß!")
+	} else if number < 5 {
+		fmt.Println("Die Zahl ist klein!")
 	} else {
-		fmt.Println("Die Zahl ist klein oder gleich 5!")
+		fmt.Println("Die Zahl ist genau 5")
 	}
 
 	// TODO: Genau 5 getrennt behandeln
@@ -367,7 +389,7 @@ func aufgabe08() {
 // ausgeben.
 
 func aufgabe09() {
-	for i := 0; i < 5; i++ {
+	for i := 10; i < 51; i += 10 {
 		fmt.Println(i)
 	}
 }
@@ -404,8 +426,19 @@ func aufgabe09() {
 
 func aufgabe10() {
 	// TODO: Baut hier euer Programm.
-
+	name := "Stefan"
+	alter := 25
+	min := "minderjährig"
 	fmt.Println("Code-Lego: Baut euer eigenes Programm!")
+	fmt.Println("")
+	fmt.Println("Servus, ich bin der", name, "derzeit bin ich", alter, "Jahre alt")
+	alter = alter - 5
+	if alter >= 18 {
+		min = "volljährig"
+	} else {
+		min = "minderjährig"
+	}
+	fmt.Println("Vor 5 Jahren war ich", min)
 }
 
 // ============================================================
